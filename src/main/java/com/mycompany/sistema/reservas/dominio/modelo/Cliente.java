@@ -62,4 +62,5 @@ public class Cliente {
     public Email getEmail() { return email; }
     public boolean isActivo() { return activo; }
     public int getPenalizaciones() { return penalizaciones; }
+    public String nombre() {return nombre; }
 }

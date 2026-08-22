@@ -10,6 +10,10 @@ import com.mycompany.sistema.reservas.dominio.modelo.Reserva;
 import com.mycompany.sistema.reservas.dominio.modelo.RangoFechas;
 import com.mycompany.sistema.reservas.dominio.modelo.ReservaAnemica;
 import com.mycompany.sistema.reservas.dominio.modelo.EstadoReserva;
+import com.mycompany.sistema.reservas.dominio.modelo.Habitacion;
+import com.mycompany.sistema.reservas.dominio.modelo.NumeroHabitacion;
+import com.mycompany.sistema.reservas.dominio.modelo.CapacidadMaxima;
+import com.mycompany.sistema.reservas.dominio.modelo.EstadoHabitacion;
 
 import java.time.LocalDateTime;
 
@@ -43,7 +47,14 @@ public class SistemaReservasDominio {
             LocalDateTime fin = LocalDateTime.now().plusDays(3);
             RangoFechas periodo = new RangoFechas(inicio, fin);
 
-            Reserva reserva = new Reserva(cliente, periodo);
+            // Se crea la habitación porque ahora toda reserva debe tener una habitación asociada.
+            NumeroHabitacion numeroHabitacion = new NumeroHabitacion("224");
+            CapacidadMaxima capacidadMaxima = new CapacidadMaxima(2);
+            Habitacion habitacion = new Habitacion(numeroHabitacion, capacidadMaxima, EstadoHabitacion.DISPONIBLE);
+
+            // La reserva ahora necesita cliente, periodo y habitación.
+            Reserva reserva = new Reserva(cliente, periodo, habitacion);
+            
             System.out.println("Reserva creada con ID: " + reserva.getId() + " - Estado: " + reserva.getEstado());
 
             reserva.confirmar();
