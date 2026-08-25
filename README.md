@@ -70,7 +70,7 @@ La idea de separar en paquetes con interfaces es que cada parte del sistema (des
 
 ## Diagrama UML
 
-El diagrama de clases completo, organizado por paquetes y con todas las relaciones (composición, agregación e implementación), está en `diagrama-uml.puml`, listo para pegar en draw.io o en el editor online de PlantUML.
+El diagrama de clases completo, organizado por paquetes y con todas las relaciones (composición, agregación e implementación)
 
 <img width="3344" height="1381" alt="Sistema reserva" src="https://github.com/user-attachments/assets/3374aeed-ded9-479c-8f43-0716291890c1" />
 
