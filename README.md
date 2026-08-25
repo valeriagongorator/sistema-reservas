@@ -3,6 +3,10 @@
 Este proyecto es un sistema de reservas de hotel en Java. Está organizado en paquetes, cada uno con una responsabilidad distinta, para que el código sea más fácil de mantener y de extender. Aquí explico qué hace cada parte y por qué unas dependen de otras.
 
 ---
+# Diagrama de Clases
+<img width="3344" height="1381" alt="Sistema reserva" src="https://github.com/user-attachments/assets/40f3391f-637e-46db-bf8c-797a4f8a38ec" />
+
+---
 
 ## `dominio.modelo` — Las entidades del negocio
 
